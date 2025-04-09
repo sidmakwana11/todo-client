@@ -7,7 +7,7 @@ import Signup from "./pages/Signup";
 import "./App.css";
 
 function App() {
-  const isAuthenticated = !!localStorage.getItem("token"); // Check if user is logged in
+  const isAuthenticated = !!localStorage.getItem("userId");
 
   return (
     <BrowserRouter>
