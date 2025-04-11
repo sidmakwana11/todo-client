@@ -16,7 +16,8 @@ const Signup = () => {
     setError("");
   
     try {
-      const data = await signupUser(username, email, password);
+      const lowerCaseEmail = email.toLowerCase(); 
+      const data = await signupUser(username, lowerCaseEmail, password); 
   
       if (data.error) {
         throw new Error(data.error);
