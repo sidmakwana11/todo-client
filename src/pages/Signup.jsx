@@ -21,7 +21,8 @@ const Signup = () => {
       if (data.error) {
         throw new Error(data.error);
       }
-  
+      localStorage.setItem("userId", data.userId);
+      localStorage.setItem("username", data.username);
       navigate("/");
     } catch (err) {
       setError(err.message);
