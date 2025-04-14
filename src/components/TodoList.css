@@ -4,7 +4,11 @@
     gap: 10px;
     margin: 20px 0;
   }
-  
+
+.header-todo{
+    margin-left : 20px;
+}
+
   input[type="text"] {
     width: 70%;
     padding: 10px;
