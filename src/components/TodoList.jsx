@@ -74,8 +74,14 @@ function TodoList() {
 
   return (
     <div className="container">
-      <h1>{username}'s To-Do List</h1>
-      <button onClick={handleLogout}>Logout</button>
+      <div className="header-container">
+        <h1 className="header-todo">{username ? `${username}'s To-Do List` : "To-Do List"}</h1>
+        {userId ? (
+          <button onClick={handleLogout}>Logout</button>
+        ) : (
+          <button onClick={() => navigate("/login")}>Login</button>
+        )}
+      </div>
 
       <div className="input-container">
         <input
