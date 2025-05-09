@@ -22,8 +22,9 @@ const Signup = () => {
       if (data.error) {
         throw new Error(data.error);
       }
-      localStorage.setItem("userId", data.userId);
-      localStorage.setItem("username", data.username);
+      sessionStorage.setItem("userId", data.userId);
+      sessionStorage.setItem("username", data.username);
+      console.log("userId and Username received: ", data.userId ,"," , data.username); 
       navigate("/");
     } catch (err) {
       setError(err.message);
@@ -41,12 +42,13 @@ const Signup = () => {
             className='Signup-input'
             type="text"
             id="username"
+            maxLength="20"
             value={username}
             onChange={(e) => setUsername(e.target.value)}
             required
           />
           <br />
-          <label className='Signup-label' htmlFor='email' autocomplete="off">Email </label>
+          <label className='Signup-label' htmlFor='email' autoComplete="off">Email </label>
           <input
             className='Signup-input'
             type="email"

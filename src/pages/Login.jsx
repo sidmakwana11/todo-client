@@ -22,8 +22,9 @@ const Login = () => {
         throw new Error(data.error);
       }
   
-      localStorage.setItem("userId", data.userId);
-      localStorage.setItem("username", data.username);
+      sessionStorage.setItem("userId", data.userId);
+      sessionStorage.setItem("username", data.username);
+      console.log("userId and Username received: ", data.userId ,",", data.username); 
       navigate("/");
     } catch (err) {
       setError(err.message);
