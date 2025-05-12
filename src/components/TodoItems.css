@@ -9,6 +9,19 @@
     border-radius: 5px;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
   }
+
+  
+.task-item input[type="checkbox"] {
+  width: 18px;
+  height: 18px;
+  border: 2px solid #0e6cc4;
+  border-radius: 3px;
+  margin-right: 5px;
+  margin-left: 5px;
+  cursor: pointer;
+  outline: none;
+  position: relative;
+}
   
   .task-content {
     display: flex;

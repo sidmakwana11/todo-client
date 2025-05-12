@@ -54,6 +54,7 @@ function TodoItem({ task, deleteTask, fetchTasks, navigateToCropper }) {
                 </>
             ) : (
                 <div className="task-content">
+                    <input type="checkbox" id="checkbox" />
                     <span className="task-title" maxlength="70">{task.title}</span>
                     {task.tempCroppedImage && (
                         <img

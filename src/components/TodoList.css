@@ -17,6 +17,9 @@ body {
   color: var(--text-color);
 }
 
+
+
+
 .container {
   max-width: 800px;
   margin: 2rem auto;

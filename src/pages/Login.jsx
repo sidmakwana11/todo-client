@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import './Login.css'; 
+import TodoList from "../components/TodoList";
 import { Link } from 'react-router-dom';
 import { loginUser } from "../services/authService";
 
@@ -25,7 +26,7 @@ const Login = () => {
       sessionStorage.setItem("userId", data.userId);
       sessionStorage.setItem("username", data.username);
       console.log("userId and Username received: ", data.userId ,",", data.username); 
-      navigate("/");
+      navigate("/TodoList");
     } catch (err) {
       setError(err.message);
     }

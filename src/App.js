@@ -12,7 +12,7 @@ function App() {
   return (
     <BrowserRouter>
       <Routes>
-        <Route path="/" element={isAuthenticated ? <TodoList /> : <Navigate to="/login" />} />
+        <Route path="/TodoList" element={isAuthenticated ? <TodoList /> : <Navigate to="/login" />} />
         <Route path="/login" element={<Login />} />
         <Route path="/signup" element={<Signup />} />
         <Route path="*" element={<Navigate to="/login" />} />
@@ -23,3 +23,5 @@ function App() {
 }
 
 export default App;
+
+// npm install @dnd-kit/core @dnd-kit/utilities @dnd-kit/sortable 

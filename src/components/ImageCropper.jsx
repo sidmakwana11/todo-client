@@ -3,6 +3,7 @@ import React, { useState, useRef, useEffect, useCallback } from "react";
 import ReactCrop from "react-image-crop";
 import CanvasPreview from "./CanvasPreview";
 import CenterAspectCrop from "./CenterAspectCrop";
+import TodoList from "./TodoList";
 import "react-image-crop/dist/ReactCrop.css";
 import { useNavigate, useLocation } from "react-router-dom";
 import "./ImageCropper.css";
@@ -85,7 +86,7 @@ function ImageCropper() {
 
                         if (!taskId) {
                             const tempUrl = URL.createObjectURL(file);
-                            navigate("/", {
+                            navigate("/TodoList", {
                                 state: {
                                     tempCroppedImage: tempUrl,
                                 },
@@ -106,7 +107,7 @@ function ImageCropper() {
 
                                 console.log("✅ File sent successfully:", imagePath);
 
-                                navigate("/", {
+                                navigate("/TodoList", {
                                     state: { taskId: data._id || taskId, uploadedImagePath: imagePath },
                                 });
                             } else {
