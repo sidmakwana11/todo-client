@@ -32,9 +32,9 @@ function TodoItem({ task, deleteTask, fetchTasks, navigateToCropper }) {
     }, [task]);
     
 
-    useEffect(() => {
-        console.log("TodoItem : task.tempCroppedImage :", task.tempCroppedImage);
-    },[task.tempCroppedImage]);
+    // useEffect(() => {
+    //     console.log("TodoItem : task.tempCroppedImage :", task.tempCroppedImage);
+    // },[task.tempCroppedImage]);
 
     return (
         <li className="task-item">
