@@ -25,7 +25,7 @@ const Login = () => {
   
       sessionStorage.setItem("userId", data.userId);
       sessionStorage.setItem("username", data.username);
-      console.log("userId and Username received: ", data.userId ,",", data.username); 
+      console.log("userId and Username received: ", data.username); 
       navigate("/TodoList");
     } catch (err) {
       setError(err.message);
