@@ -81,8 +81,8 @@ function ImageCropper() {
                         formData.append("image", file);
 
                         const endpoint = taskId
-                            ? "http://localhost:5004/upload"
-                            : "http://localhost:5004/todo/new";
+                            ? "https://todo-todoservices.onrender.com/upload"
+                            : "https://todo-todoservices.onrender.com/todo/new";
 
                         if (!taskId) {
                             const tempUrl = URL.createObjectURL(file);
