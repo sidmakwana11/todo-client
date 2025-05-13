@@ -127,9 +127,9 @@ function ImageCropper() {
 
     const handleRemoveImage = useCallback(() => {
         if (taskId) {
-            navigate("/", { state: { taskId: taskId, removeImage: true } });
+            navigate("/TodoList", { state: { taskId: taskId, removeImage: true } });
         } else {
-            navigate("/", { state: {} });
+            navigate("/TodoList", { state: {} });
         }
     }, [navigate, taskId]);
 
@@ -152,7 +152,7 @@ function ImageCropper() {
     );
 
     const handleCancel = useCallback(() => {
-        navigate("/");
+        navigate("/TodoList");
     }, [navigate]);
 
     const triggerFileInput = useCallback(() => {
